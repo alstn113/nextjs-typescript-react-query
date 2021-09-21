@@ -14,7 +14,8 @@ import { IReview } from '@/shared/type';
 import ReviewDetailComponent from '@/components/Review/ReviewDetail';
 
 function ReviewDetailPage() {
-  const id = useRouter().query.id as string;
+  const router = useRouter();
+  const id = router.query.id?.toString();
   const {
     data: review,
     isLoading,
@@ -32,14 +33,14 @@ function ReviewDetailPage() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext,
-): Promise<
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: GetStaticPropsContext): Promise<
   GetStaticPropsResult<{
     dehydratedState: DehydratedState;
   }>
 > => {
-  const id = context?.params?.id as string;
+  const id = params?.id?.toString();
 
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery(['review', id], () => getReviewById(id));
