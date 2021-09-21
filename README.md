@@ -1,7 +1,7 @@
 npx create-next-app 이름 --ts
 
       npm i react-query axios
-      npm i -D @types/node @types/react-dom ts-node
+      npm i -D @types/node @types/react-dom
 
 \_app.tsx 설정
 
@@ -29,3 +29,10 @@ react-hook-form 사용
 typescript 에러 때문에 버전 정해서 쓰기
 
       npm i react-hook-form@^7.11.1 yup@^0.32.9 @hookform/resolvers@^2.6.1
+
+redux/toolkit 사용
+
+      npm i @reduxjs/toolkit react-redux next-redux-wrapper
+      npm i -D @types/react-redux ts-node
+
+/app/store.ts에서 state와 action의 type를 어떻게 할지 몰라서 그냥 빠른 문제해결? 사용함

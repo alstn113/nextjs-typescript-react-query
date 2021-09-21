@@ -7,6 +7,7 @@ import { ThemeProvider } from '@emotion/react';
 import { GlobalStyle } from '@/styles/global-style';
 import { theme } from '@/styles/theme';
 import LayoutComponent from '@/components/Layout';
+import { wrapper } from '@/app/store';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -34,4 +35,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     </QueryClientProvider>
   );
 }
-export default MyApp;
+export default wrapper.withRedux(MyApp);

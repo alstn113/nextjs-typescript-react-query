@@ -34,6 +34,14 @@ function HeaderComponent() {
                 </Link>
               ))}
         </nav>
+        <div>
+          <Link href="/redux-toolkit/counter">
+            <a>counter</a>
+          </Link>
+          <Link href="/redux-toolkit/kanye">
+            <a>kanye</a>
+          </Link>
+        </div>
       </div>
     </>
   );
