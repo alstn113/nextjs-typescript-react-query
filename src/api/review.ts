@@ -1,4 +1,4 @@
-import { IReview, ICategory } from '@/shared/type';
+import { IReview } from '@/shared/type';
 import client from '@/utils/axios';
 
 export const getReviews = async (): Promise<IReview[]> => {
@@ -11,12 +11,11 @@ export const getReviewById = async (id: string | string[] | undefined): Promise<
   return data;
 };
 
-export const getCategories = async (): Promise<ICategory[]> => {
-  const { data } = await client.get(`/categories`);
-  return data;
-};
-
-export const getCategoryById = async (id: string | string[] | undefined): Promise<ICategory> => {
-  const { data } = await client.get(`/categories/${id}`);
+export const createReview = async (
+  title: string,
+  body: string,
+  rating: number,
+): Promise<IReview> => {
+  const { data } = await client.post('/reviews', { title, body, rating });
   return data;
 };

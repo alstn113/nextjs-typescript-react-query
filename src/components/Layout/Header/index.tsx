@@ -1,4 +1,4 @@
-import { getCategories } from '@/api/review';
+import { getCategories } from '@/api/category';
 import { ICategory } from '@/shared/type';
 import Link from 'next/link';
 import { useQuery, UseQueryResult } from 'react-query';

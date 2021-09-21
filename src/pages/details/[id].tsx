@@ -8,7 +8,8 @@ import {
   GetStaticPropsResult,
 } from 'next';
 
-import { getCategories, getReviewById, getReviews } from '@/api/review';
+import { getReviewById, getReviews } from '@/api/review';
+import { getCategories } from '@/api/category';
 import { IReview } from '@/shared/type';
 import ReviewDetailComponent from '@/components/Review/ReviewDetail';
 

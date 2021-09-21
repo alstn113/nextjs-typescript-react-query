@@ -24,3 +24,8 @@ emotion 설정
 
 \_app.tsx 설정
 .babelrc 설정
+
+react-hook-form 사용
+typescript 에러 때문에 버전 정해서 쓰기
+
+      npm i react-hook-form@^7.11.1 yup@^0.32.9 @hookform/resolvers@^2.6.1

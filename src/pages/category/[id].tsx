@@ -8,7 +8,7 @@ import {
   GetStaticPropsResult,
 } from 'next';
 
-import { getCategories, getCategoryById } from '@/api/review';
+import { getCategories, getCategoryById } from '@/api/category';
 import { ICategory } from '@/shared/type';
 import ReviewCardComponent from '@/components/Review/ReviewCard';
 

@@ -1,7 +1,8 @@
 import { dehydrate, DehydratedState, QueryClient, useQuery, UseQueryResult } from 'react-query';
 import { GetStaticProps, GetStaticPropsResult } from 'next';
 
-import { getCategories, getReviews } from '@/api/review';
+import { getReviews } from '@/api/review';
+import { getCategories } from '@/api/category';
 import type { IReview } from '@/shared/type';
 import ReviewCardComponent from '@/components/Review/ReviewCard';
 
