@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { ReactChild } from 'react';
 
 interface Props {
@@ -7,6 +8,8 @@ interface Props {
 }
 
 function LayoutComponent(props: Props) {
+  const router = useRouter();
+
   return (
     <>
       <HomeHeader>
@@ -25,7 +28,10 @@ function LayoutComponent(props: Props) {
             </Link>
           </div>
         </Header>
-        <TapWrapper></TapWrapper>
+        <TapWrapper>
+          <TapMain>Tap Main</TapMain>
+          <TapSub>Tap Sub</TapSub>
+        </TapWrapper>
       </HomeHeader>
 
       <HomePage>
@@ -56,24 +62,38 @@ export const Header = styled('div')`
       margin-left: 20px;
     }
   }
-  background-color: gray;
+  background-color: yellow;
 `;
 
 export const TapWrapper = styled('div')`
   height: 82px;
-  background-color: blue;
-  .swiper {
-    display: flex;
-    height: 36px;
-    max-width: 1024px;
-    text-align: center;
-  }
 `;
+
+export const TapMain = styled('div')`
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 36px;
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const TapSub = styled('div')`
+  max-width: 630px;
+  margin: 0 auto;
+  height: 46px;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const HomePage = styled('div')`
   padding-top: 136px;
 
   .container {
-    max-width: 600px;
+    max-width: 630px;
     margin: 0 auto;
     background-color: red;
   }

@@ -17,8 +17,6 @@ export function GlobalStyle() {
         }
         a {
           text-decoration: none;
-          color: #8e2ad6;
-          border-bottom: 1px dotted;
         }
       `}
     />
