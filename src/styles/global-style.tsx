@@ -7,20 +7,12 @@ export function GlobalStyle() {
     <Global
       styles={css`
         ${emotionReset}
-        * {
-          box-sizing: border-box;
-          ::-webkit-scrollbar {
-            display: none;
-          }
-        }
         html {
-          background: ${theme.color.background};
-          margin: 0 auto;
+          box-sizing: border-box;
         }
 
         body {
-          max-width: 1024px;
-          padding: 50px;
+          background: ${theme.color.background};
           margin: 0 auto;
         }
         a {

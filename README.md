@@ -36,3 +36,8 @@ redux/toolkit 사용
       npm i -D @types/react-redux ts-node
 
 /app/store.ts에서 state와 action의 type를 어떻게 할지 몰라서 그냥 빠른 문제해결? 사용함
+
+react-slick 사용
+
+      npm i react-slick slick-carousel
+      @types/react-slick
